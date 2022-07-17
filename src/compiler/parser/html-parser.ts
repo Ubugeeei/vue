@@ -68,7 +68,7 @@ export interface HTMLParserOptions extends CompilerOptions {
   comment?: (content: string, start: number, end: number) => void
 }
 
-export function parseHTML(html, options: HTMLParserOptions) {
+export function parseHTML(html: string, options: HTMLParserOptions) {
   const stack: any[] = []
   const expectHTML = options.expectHTML
   const isUnaryTag = options.isUnaryTag || no
