@@ -33,5 +33,5 @@
       "vue": ["src/platforms/web/entry-runtime-with-compiler"]
     }
   },
-  "include": ["src", "packages/*/src"]
+  "include": ["src", "packages/*/src", "test/playgrond.ts"]
 }
