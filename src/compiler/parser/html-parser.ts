@@ -215,10 +215,18 @@ export function parseHTML(html: string, options: HTMLParserOptions) {
   function parseStartTag() {
     const start = html.match(startTagOpen)
     if (start) {
-      const match: any = {
+      const match: {
+        tagName: string
+        attrs: ASTAttr[]
+        start: number
+        end: number
+        unarySlash: string
+      } = {
         tagName: start[1],
         attrs: [],
-        start: index
+        start: index,
+        end: index,
+        unarySlash: ''
       }
       advance(start[0].length)
       let end, attr
